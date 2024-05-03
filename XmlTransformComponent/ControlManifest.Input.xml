@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="XmlTransformationWithXslt" constructor="XmlTransformComponent" version="0.0.1" display-name-key="XmlTransformComponent" description-key="XmlTransformComponent description" control-type="standard" >
+    <!--external-service-usage node declares whether this 3rd party PCF control is using external service or not, if yes, this control will be considered as premium and please also add the external domain it is using.
+    If it is not using any external service, please set the enabled="false" and DO NOT add any domain below. The "enabled" will be false by default.
+    Example1:
+      <external-service-usage enabled="true">
+        <domain>www.Microsoft.com</domain>
+      </external-service-usage>
+    Example2:
+      <external-service-usage enabled="false">
+      </external-service-usage>
+    -->
+    <external-service-usage enabled="false">
+      <!--UNCOMMENT TO ADD EXTERNAL DOMAINS
+      <domain></domain>
+      <domain></domain>
+      -->
+    </external-service-usage>
+   
+   <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+
+      <property name="functionName" display-name-key="functionName" description-key="functionName" of-type="Enum" usage="input" required="true">
+       <value name="XmlTransformFromXslt(strXml,StrXslt)" display-name-key="XmlTransformFromXslt(strXml,StrXslt)" description-key="Transform the XML based on XSLT">XmlTransformFromXslt</value>
+      </property>
+
+      <property name="InputXML" display-name-key="InputXML" description-key="InputXML" of-type-group="types" of-type="Multiple" usage="input" required="false" />
+      <property name="InputXslt" display-name-key="InputXslt" description-key="InputXslt" of-type-group="types" of-type="Multiple" usage="input" required="false" />
+      <property name="OutputXML" display-name-key="OutputXML" description-key="OutputXML" of-type-group="types" of-type="Multiple" usage="output" required="false" />
+   
+    <!--
+      Property node's of-type attribute can be of-type-group attribute.
+      Example:
+      -->
+      <type-group name="types">
+        <type>SingleLine.Text</type>
+        <type>Multiple</type>
+        <type>Whole.None</type>
+        <type>Currency</type>
+        <type>FP</type>
+        <type>Decimal</type>
+        <type>DateAndTime.DateAndTime</type>
+        <type>TwoOptions</type>
+        <type>OptionSet</type>
+      </type-group>
+    
+    
+    <resources>
+      <code path="index.ts" order="1"/>
+      <!-- UNCOMMENT TO ADD MORE RESOURCES
+      <css path="css/XmlTransformComponent.css" order="1" />
+      <resx path="strings/XmlTransformComponent.1033.resx" version="1.0.0" />
+      -->
+    </resources>
+    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API -->
+    <!-- <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage> -->
+    
+  </control>
+</manifest>
