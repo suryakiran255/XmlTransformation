@@ -7,3 +7,7 @@ At present, it is not possible to apply an XSL Transformation (XSLT) to an XML f
 Generate the PCF solution using the repository. Import the same to your power platform environment. Please enable using code components within Canvas Apps at your environment level. Below is a quick demo of the PCF Control
 
 https://youtu.be/xEIkxzMmiF0
+
+## Pre-built Solutions
+**Unmanaged Solution** - [XmlTransformationPCFControl.zip](https://github.com/suryakiran255/XmlTransformation/blob/master/Solutions/XmlTransformationPCFControl.zip)
+**Managed Solution** - [XmlTransformationPCFControl_managed.zip](https://github.com/suryakiran255/XmlTransformation/blob/master/Solutions/XmlTransformationPCFControl_managed.zip)
